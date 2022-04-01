@@ -1,16 +1,39 @@
-# ds-modeling-pipeline
-Skeleton project for building a simple model in python script
-This is the simplest way to do it. We train a simple model in the jupyter notebook, where we select only some features and do minimal cleaning. The output is then stored in simple python scripts.
+# Neuefische Machine learning project: "Flight Delay"
 
-Data used is the  [coffee quality dataset](https://github.com/jldbc/coffee-quality-database).
+[![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/) 
 
-##
-Requirements:
+
+## Neuefische data science bootcamp
+---
+[Neuefische GmbH](https://www.neuefische.de/) provides, amongst other bootcamps, a data science course. Integral part of the learning pipeline are three main projects. This project is focussing on applying acquired knowledge about different machine learning  (ML) algorithms.
+
+
+## Aims of the Machine learning project
+---
+In small working groups, a given data set is processed and analyzed by applying exploratory data analysis and consequently performing a corresponding feature engineering. The topics are based on different business models and demand the acquisition of related business knowledge to pass a task that is related to a machine learning problem.
+
+### Flight delay challenge
+---
+This challenge is based on a [Zindi](https://zindi.africa/competitions/ai-tunisia-hack-5-predictive-analytics-challenge-2)  data science competition. 
+
+### Data source
+The given data set for this particular project is consists of two parts: 1) the AI Tunisair flight data and 2) the Python Airport data set.
+
+### Methods and Results
+- exploratory data analysis of both data sets
+    * data cleaning
+    * feature engineering
+    * data visualization
+- applying machine learning algorithms (supervised and unsupervised classification and/or regression algorithms)
+- answering to business question of the project in form of lay presentation of the results (presentation.pdf)
+
+
+
+## Installation
+__Requirements:__
 - pyenv with Python: 3.9.4
 
-### Environment
-
-Same procedure as last time...
+__Environment Installation:__
 
 Use the requirements file in this repo to create a new environment.
 
@@ -25,20 +48,13 @@ pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-If You encounter errors related to statsmodels, try:
-
-```BASH
-OPENBLAS="$(brew --prefix openblas)" pip install numpy statsmodels
-```
-
-## Usage
+__Usage:__
 
 In order to train the model and store test data in the data folder and the model in models run:
 
 ```bash
 #activate env
 source .venv/bin/activate
-
 python train.py  
 ```
 
@@ -47,7 +63,8 @@ In order to test that predict works on a test set you created run:
 ```bash
 python predict.py models/linear_regression_model.sav data/X_test.csv data/y_test.csv
 ```
+## Contributors/Authors of this ML project
+* Martin Lützner
+* Patrick Schmitz
+* Christian Klingler
 
-## Limitations
-
-development libraries are part of the production environment, normally these would be separate as the production code should be as slim as possible
